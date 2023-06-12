@@ -16,4 +16,15 @@ awesomeBooks.addBook('The Catcher in the Rye', 'J. D. Salinger');
 awesomeBooks.addBook('Pride and Prejudice', 'Jane Austen');
 awesomeBooks.addBook('The Adventures of Huckleberry Finn', 'Mark Twain');
 
+const booksListContainer = document.querySelector('#books');
+
+booksListContainer.addEventListener('click', (e) => {
+  if (e.target.classList.contains('remove-btn')) {
+    const id = e.target.dataset.bookId;
+    awesomeBooks.removeBook(id);
+    booksListContainer.innerHTML = '';
+    renderAllBooks(awesomeBooks.books);
+  }
+});
+
 window.addEventListener('load', renderAllBooks(awesomeBooks.books));
