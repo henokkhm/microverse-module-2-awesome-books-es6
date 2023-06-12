@@ -4,7 +4,7 @@
   "description": "This project is an exercise for Module 2 - Week 2 of the Full-Stack Developer program offered by Microverse.",
   "main": "index.js",
   "scripts": {
-    "lint": "npx hint . && npx stylelint \"**/*.{css,scss}\""
+    "lint": "npx hint . && npx stylelint \"**/*.{css,scss}\" && npx eslint ."
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,10 @@
   },
   "homepage": "https://github.com/henokkhm/microverse-module-2-awesome-books-es6#readme",
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.27.5",
     "hint": "7.1.8",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
